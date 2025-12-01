@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://lhlnh0dmg07j"]
-
-[ext_resource type="Script" uid="uid://dfjnu53m5hc2x" path="res://puntos.gd" id="1_athhh"]
-
-[node name="Puntos" type="Node"]
-script = ExtResource("1_athhh")

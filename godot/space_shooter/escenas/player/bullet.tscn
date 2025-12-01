@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://do1v8q03onjvu"]
-
-[node name="Bullet" type="ColorRect"]
-offset_right = 2.0
-offset_bottom = 10.0

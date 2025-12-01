@@ -1,5 +1,0 @@
-[gd_resource type="Theme" format=3 uid="uid://yhft5m1dd2bb"]
-
-[resource]
-Label/colors/font_shadow_color = Color(0, 0, 0, 0.63529414)
-Label/constants/shadow_offset_x = 1
