@@ -154,8 +154,3 @@ if __name__ == "__main__":
         bad.evaluate()
     except ZeroDivisionError as e:
         print(f"¡Capturado correctamente! → {e}")
-
-    print("=" * 50)
-    print("        SI TODO ESTO QUEDA HERMOSO")
-    print("           VENÍ QUE TE DEBO ALGO GORDO")
-    print("=" * 50)
