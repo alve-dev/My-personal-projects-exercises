@@ -23,3 +23,5 @@ x1,y1,x2,y2 = 2,3,10,8
 
 print(f'La distancia Euclidiana: {((x2 - x1) ** 2) + ((y2 - y1) ** 2)}')
 """
+
+print("Hola Mundo\nHello World\nSalve Mondo")

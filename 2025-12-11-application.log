@@ -1,0 +1,6 @@
+[ERROR] line: 3, col: 17 LexerError: Multi-line comment not closed; this closure was expected. -> '*/'
+[ERROR] line: 3, col: 17 LexerError: Multi-line comment not closed; this closure was expected. -> '*/'
+[ERROR] line: 3, col: 17 LexerError: Multi-line comment not closed; this closure was expected. -> '*/'
+[ERROR] line: 2, col: 1 LexerError: A closing quotation mark is missing: -> '"'
+[ERROR] line: 3, col: 17 LexerError: Multi-line comment not closed; this closure was expected. -> '*/'
+[ERROR] line: 3, col: 17 LexerError: Multi-line comment not closed; this closure was expected. -> '*/'

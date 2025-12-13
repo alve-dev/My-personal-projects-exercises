@@ -7,7 +7,7 @@ namespace SintaxI
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Ingresa un numero: ");
+            /*Console.WriteLine("Ingresa un numero: ");
             string inputNumber1 = Console.ReadLine();
             int number1 = int.Parse(inputNumber1);
 
@@ -20,7 +20,9 @@ namespace SintaxI
                 Console.WriteLine($"{number1} es mayor a {number2}");
             } else {
                 Console.WriteLine($"{number2} es mayor a {number1}");
-            }
+            }*/
+
+            Console.WriteLine("Hola Mundo");
         }
     }
 }
