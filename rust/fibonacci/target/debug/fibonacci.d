@@ -1,0 +1,1 @@
+/home/alejandro/programacion/My-personal-projects-exercises/My-personal-projects-exercises/rust/fibonacci/target/debug/fibonacci: /home/alejandro/programacion/My-personal-projects-exercises/My-personal-projects-exercises/rust/fibonacci/src/main.rs

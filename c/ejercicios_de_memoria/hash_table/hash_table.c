@@ -17,7 +17,6 @@ typedef struct
     entry **buckets;
     size_t capacity;
     size_t size;
-    double load_factor;
 } table;
 
 //Prototipos de los metodos
@@ -69,6 +68,11 @@ int main(void)
 }
 
 //Metodos de la hash table
+static inline double load_factor(const table *hs)
+{
+    return (double)hs->size / hs->capacity;
+}
+
 table *hs_create(size_t capacity)
 {
     table *ht = malloc(sizeof(table));
@@ -83,7 +87,6 @@ table *hs_create(size_t capacity)
 
     ht->capacity = capacity;
     ht->size = 0;
-    ht->load_factor = 0.0;
     return ht;
 
 }
@@ -101,19 +104,25 @@ static unsigned int hash(const char *key, size_t capacity)
 
 static void resize(table **dict)
 {
-    table *new_dict = hs_create((*dict)->capacity << 1);
+    table *old = *dict;
+    table *new_dict = hs_create(old->capacity << 1);
 
-    for (size_t i = 0; i < (*dict)->capacity; i++)
+    for (size_t i = 0; i < old->capacity; i++)
     {
-        entry *current = (*dict)->buckets[i];
+        entry *current = old->buckets[i];
         while (current != NULL)
         {
             entry *next = current->next;
-            hs_insert(&new_dict, current->key, current->value);
+            unsigned int new_hash = hash(current->key, new_dict->capacity);
+            current->next = new_dict->buckets[new_hash];
+            new_dict->buckets[new_hash] = current;
+            new_dict->size++;
             current = next;
         }
     }
-    hs_clear(*dict);
+    free(old->buckets);
+    free(old);
+
     *dict = new_dict;
 }
 
@@ -130,7 +139,7 @@ char *my_strdup(const char *s)
 
 void hs_insert(table **dict, const char *key, const char* value)
 {
-    if ((*dict)->load_factor >= 0.75)
+    if (load_factor(*dict) >= 0.75)
     {
         resize(dict);
     }
@@ -167,7 +176,6 @@ void hs_insert(table **dict, const char *key, const char* value)
 
     (*dict)->buckets[hash_key] = new;
     (*dict)->size++;
-    (*dict)->load_factor = (double)(*dict)->size / (*dict)->capacity;
 }
 
 char *hs_search(table *dict, const char *key)
@@ -222,7 +230,6 @@ void hs_delete(table *dict, const char *key)
    free(current->value);
    free(current);
    dict->size--;
-   dict->load_factor = (double)dict->size / dict->capacity;
 }
 
 void hs_clear(table *dict)
@@ -250,6 +257,5 @@ void hs_clear(table *dict)
     free(dict->buckets);
     dict->buckets = NULL;
     dict->size = 0;
-    dict->load_factor = 0.0;
 }
 
