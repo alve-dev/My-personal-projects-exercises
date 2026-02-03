@@ -1,1 +1,0 @@
-/home/alejandro/programacion/My-personal-projects-exercises/My-personal-projects-exercises/rust/temperatura/target/debug/temperatura: /home/alejandro/programacion/My-personal-projects-exercises/My-personal-projects-exercises/rust/temperatura/src/main.rs

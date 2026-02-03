@@ -1,1 +1,0 @@
-/home/alejandro/programacion/My-personal-projects-exercises/My-personal-projects-exercises/rust/functions/target/debug/functions: /home/alejandro/programacion/My-personal-projects-exercises/My-personal-projects-exercises/rust/functions/src/main.rs

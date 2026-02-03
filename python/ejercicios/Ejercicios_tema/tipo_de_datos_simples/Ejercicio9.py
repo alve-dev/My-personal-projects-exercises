@@ -15,4 +15,4 @@ money_gained = amount_invest * (annual_interest/100 + 1) ** years_in_invest
 
 
 print(f'''El dinero ganado de su inversión con un monto inicial de {amount_invest}$
-con un rendimiento anual de {annual_interest*100}% es: {money_gained:.2f}$''')
+con un rendimiento anual de {annual_interest}% es: {money_gained:.2f}$''')

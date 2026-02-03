@@ -12,7 +12,6 @@ int main(void)
     std::cout << std::endl;
     for (int i = 1; i <= n; i++)
     {
-
         std::cout << fibonacci << " ";
 
         current = fibonacci;

@@ -1,1 +1,0 @@
-/home/alejandro/programacion/My-personal-projects-exercises/My-personal-projects-exercises/rust/guessing_game/target/debug/guessing_game: /home/alejandro/programacion/My-personal-projects-exercises/My-personal-projects-exercises/rust/guessing_game/src/main.rs
